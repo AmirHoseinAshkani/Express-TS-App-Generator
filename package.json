@@ -1,6 +1,6 @@
 {
   "name": "express-ts-app-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI to create Express + TypeScript apps",
   "main": "dist/bin/index.js",
   "scripts": {
@@ -21,7 +21,6 @@
   "dependencies": {
     "inquirer": "^12.9.4"
   },
-
   "devDependencies": {
     "@types/node": "^24.3.0",
     "typescript": "^5.9.2"
