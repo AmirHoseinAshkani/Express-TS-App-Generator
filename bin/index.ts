@@ -103,9 +103,20 @@ async function main(): Promise<void> {
     stdio: "inherit",
   });
 
+  // src
   const srcPath = path.join(projectPath, "src");
   fs.mkdirSync(srcPath);
 
+  // services, routes, controllers
+  const servicesPath = path.join(srcPath, "services");
+  const routesPath = path.join(srcPath, "routes");
+  const controllersPath = path.join(srcPath, "controllers");
+
+  [servicesPath, routesPath, controllersPath].forEach((dir) => {
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir);
+  });
+
+  // entry
   const entryFile: string =
     language === "TypeScript"
       ? path.join(srcPath, "index.ts")
@@ -132,6 +143,7 @@ app.listen(3000, () => {
 
   fs.writeFileSync(entryFile, serverCode.trim());
 
+  // tsconfig.json
   if (language === "TypeScript") {
     const tsConfig = {
       compilerOptions: {

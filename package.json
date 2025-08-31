@@ -11,6 +11,14 @@
   "bin": {
     "create-express-ts-app": "./dist/bin/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmirHoseinAshkani/Express-TS-App-Generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AmirHoseinAshkani/Express-TS-App-Generator/issues"
+  },
+  "homepage": "https://github.com/AmirHoseinAshkani/Express-TS-App-Generator#readme",
   "files": [
     "dist",
     "README.md",
